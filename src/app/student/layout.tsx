@@ -1,10 +1,10 @@
 'use client';
 
 import { Topnav } from '@/components/student/topnav';
-import { usePathname } from 'next/navigation';
+//import { usePathname } from 'next/navigation';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+  //const pathname = usePathname();
 
   
 
