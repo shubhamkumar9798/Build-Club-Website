@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation'; // Using Next.js' useParams for dynamic routes
 import Pic from '@/components/student/pic';
-import { Button } from '@/components/ui/button'; // Import Button
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 
 // Dummy event data
 const events = [
@@ -52,10 +53,10 @@ export default function EventDetailsPage() {
   }
 
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center py-8">
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-lg w-full">
+    <Card className="pt-20 bg-white min-h-screen py-8 px-4">
+      <div className="bg-gray-50 shadow-lg rounded-lg p-6 max-w-4xl mx-auto">
         {/* Event Image */}
-        <Pic src={event.image} alt={event.title} className="mb-4 rounded-lg" />
+        <Pic src={event.image} alt={event.title} className="mb-4 rounded-lg w-full h-60 object-cover" />
 
         {/* Event Title */}
         <h1 className="text-3xl font-bold mb-4 text-center">{event.title}</h1>
@@ -82,13 +83,13 @@ export default function EventDetailsPage() {
         </p>
 
         {/* Event Description */}
-        <p className="text-gray-700 text-sm mb-4">{event.description}</p>
+        <p className="text-gray-700 text-sm mb-4 text-center">{event.description}</p>
 
         {/* Back Button */}
         <Button className="w-full bg-blue-500 text-white hover:bg-blue-600 mt-4">
           <a href="/student/eventsPage" className="w-full text-center text-white">Back to Events</a>
         </Button>
       </div>
-    </div>
+    </Card>
   );
 }

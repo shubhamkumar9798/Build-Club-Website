@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Pic from "@/components/student/pic";
 import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 
 const events = [
   {
@@ -58,7 +59,7 @@ const EventDetailsPage = () => {
   }
 
   return (
-    <div className="pt-20 bg-white min-h-screen py-8 px-4">
+    <Card className="pt-20 bg-white min-h-screen py-8 px-4">
       <div className="bg-gray-50 shadow-lg rounded-lg p-6 max-w-4xl mx-auto">
         {/* Event Header */}
         <div className="mb-6">
@@ -116,7 +117,7 @@ const EventDetailsPage = () => {
           </a>
         </Button>
       </div>
-    </div>
+    </Card>
   );
 };
 

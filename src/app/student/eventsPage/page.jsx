@@ -50,7 +50,7 @@ export default function EventsPage() {
       <Card className="max-w-6xl mx-auto p-6 space-y-6 pt-20">
       {/* Upcoming Events */}
       <h1 className="text-3xl font-bold text-center mb-8">Upcoming Events</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+      <div className="flex flex-wrap justify-center gap-8">
         {upcomingEvents.map((event) => (
           <HoverCard key={event.id} openDelay={300} closeDelay={300}>
             <HoverCardTrigger asChild>
@@ -73,7 +73,7 @@ export default function EventsPage() {
 
       {/* Past Events */}
       <h1 className="text-3xl font-bold text-center mt-16 mb-8">Past Events</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center mx-auto">
+      <div className="flex flex-wrap justify-center gap-8">
         {pastEvents.map((event) => (
           <HoverCard key={event.id} openDelay={300} closeDelay={300}>
             <HoverCardTrigger asChild>
