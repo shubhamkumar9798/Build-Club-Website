@@ -21,6 +21,7 @@ const RegisterForm = () => {
   Don’t have an ID? Generate Now
 </button>
 
+
         </div>
 
         <div className="mb-3">
