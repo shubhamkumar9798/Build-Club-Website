@@ -14,7 +14,13 @@ const RegisterForm = () => {
               Build Club IITM ID
             </label>
             <input type="text" className="form-control" id="id" placeholder="Enter your Build Club IITM ID" />
-            <a href="#" className="text-blue-500 text-sm mt-2 block">Don’t have an ID? Generate Now</a>
+            <button
+  onClick={() => window.open("http://121.242.232.216:3000/registration/", "_blank", "noopener noreferrer")}
+  className="text-blue-500 text-sm mt-2 block underline bg-transparent border-none cursor-pointer"
+>
+  Don’t have an ID? Generate Now
+</button>
+
         </div>
 
         <div className="mb-3">
