@@ -9,6 +9,7 @@ export default function Pic({ src, alt, className }) {
       layout="responsive"
       width={500}
       height={250}
+      priority
     />
   );
 }

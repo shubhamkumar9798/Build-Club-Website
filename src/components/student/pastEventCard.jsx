@@ -8,7 +8,7 @@ export default function PastEventCard({ event }) {
     <Card className="w-full max-w-xs flex flex-col justify-between shadow-lg rounded-lg mb-6 mx-auto pb-1">
       {/* Event Image */}
       <div className="h-40 w-full overflow-hidden rounded-t-lg">
-        <Pic src={event.image} alt={event.title} className="h-full w-full object-cover" />
+        <Pic src={event.image} alt={event.title} className="h-full w-full object-cover" priority />
       </div>
 
       {/* Event Content */}
@@ -20,7 +20,7 @@ export default function PastEventCard({ event }) {
 
       {/* Show More Button */}
       <CardFooter className="p-2">
-        <Link href={`/student/pastEvents/${event.id}`} passHref>
+        <Link rel= "preload" href={`/student/pastEvents/${event.id}`} passHref>
           <Button className="w-full bg-blue-500 text-white hover:bg-blue-600 transition ">
             Show More
           </Button>

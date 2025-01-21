@@ -18,6 +18,7 @@ export function Topnav() {
             alt="Logo"
             width={100}
             height={80}
+            priority
           />
         </Link>
         <div className="text-2xl font-bold text-gray-700">Build Club SSN</div>
@@ -25,13 +26,13 @@ export function Topnav() {
 
       {/* Right side: Navigation Links and Avatar */}
       <div className="hidden md:flex items-center space-x-6">
-        <Link href="/about" className="text-gray-700 hover:text-gray-900">
+        <Link rel= "preload" href="/about" className="text-gray-700 hover:text-gray-900">
           Home
         </Link>
-        <Link href="/student/eventsPage" className="text-gray-700 hover:text-gray-900">
+        <Link rel= "preload" href="/student/eventsPage" className="text-gray-700 hover:text-gray-900">
           Events
         </Link>
-        <Link href="/student/ourTeam" className="text-gray-700 hover:text-gray-900">
+        <Link rel= "preload" href="/student/ourTeam" className="text-gray-700 hover:text-gray-900">
           Our Team
         </Link>
         <UserAvatar />

@@ -276,6 +276,7 @@ const CoreMembersPage = () => {
                   src={member.image}
                   alt={member.name}
                   className="w-full h-56 object-cover object-top"
+                  priority
                 />
                 <CardHeader className="h-12 p-2 text-lg font-bold text-gray-900 text-center">
                   {member.title}
