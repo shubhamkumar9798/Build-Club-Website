@@ -1,5 +1,5 @@
 const Footer = () => (
-    <div className="bg-blue-800 text-white py-8 text-center">
+    <div className="relative bg-blue-800 text-white py-8 text-center">
       <p>Follow us on:</p>
       <div className="flex justify-center space-x-4 mt-4">
         <a href="#" className="hover:underline">Facebook</a>

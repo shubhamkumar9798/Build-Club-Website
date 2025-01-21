@@ -9,6 +9,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
+
     <div className="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen overflow-y-scroll">
       {/* First Page Section */}
       <div className="relative h-screen">
@@ -35,12 +36,12 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="flex space-x-4">
-            <Link href="/register" passHref>
+            <Link href="auth/register" passHref>
               <button className="px-6 py-3 text-blue-600 font-semibold bg-white border border-blue-600 rounded-lg shadow-md hover:bg-blue-100 transition duration-300">
                 Register
               </button>
             </Link>
-            <Link href="/login" passHref>
+            <Link href="auth/login" passHref>
               <button className="px-6 py-3 text-blue-600 font-semibold bg-white border border-blue-600 rounded-lg shadow-md hover:bg-blue-100 transition duration-300">
                 Login
               </button>
@@ -57,7 +58,7 @@ export default function Home() {
 	  
 
       {/* Testimonial Section */}
-      <div className="w-full absolute flex flex-wrap min-h-screen bg-transparent flex flex-col justify-center items-center px-8 py-16 pl-50">
+      <div className="w-full relative flex flex-wrap min-h-screen bg-transparent flex flex-col justify-center items-center px-8 py-16 pl-50">
   			<h2 className="text-3xl font-bold text-center text-blue-800 mb-8">
     			What Students Say
   			</h2>
@@ -70,9 +71,11 @@ export default function Home() {
 
       {/* Footer Section */}
 	  
-	  	<Footer />
-	  
+	  	
+	  <Footer />
       
     </div>
+	
+	
   );
 }
