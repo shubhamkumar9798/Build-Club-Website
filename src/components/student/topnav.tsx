@@ -74,13 +74,13 @@ export function Topnav() {
       {menuOpen && (
         <div className="absolute top-16 right-0 w-full bg-white shadow-lg md:hidden">
           <div className="flex flex-col space-y-4 py-4 px-6">
-            <Link
+            {/* <Link
               href="/about"
               className="text-gray-700 hover:text-gray-900"
               onClick={() => setMenuOpen(false)}
             >
               Home
-            </Link>
+            </Link> */}
             <Link
               href="/student/eventsPage"
               className="text-gray-700 hover:text-gray-900"
