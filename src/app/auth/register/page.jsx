@@ -2,6 +2,7 @@ import React from 'react';
 import RegisterForm from '@/components/auth/registerform';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+import Link from "next/link";
 
 const Register = () => {
   return (
@@ -21,13 +22,15 @@ const Register = () => {
       {/* Logo Card */}
       <Card className="text-center mb-4 mx-auto" style={{ maxWidth: '120px' }}>
               <CardContent className="p-2">
-                <Image
-                  src="/buildclublogo.png"
-                  alt="Club Logo"
-                  width={150}   // Adjust width to fit the card
-                  height={150}  // Adjust height to fit the card
-                  style={{ objectFit: 'contain' }}  // Ensure the image fits inside while maintaining aspect ratio
-                />
+                <Link href="/" passHref>
+                          <Image
+                            src="/buildclublogo.png"
+                            alt="Club Logo"
+                            width={150}   // Adjust width to fit the card
+                            height={150}  // Adjust height to fit the card
+                            style={{ objectFit: 'contain' }}  // Ensure the image fits inside while maintaining aspect ratio
+                          />
+                        </Link>
               </CardContent>
             </Card>
       {/* Register Heading */}
