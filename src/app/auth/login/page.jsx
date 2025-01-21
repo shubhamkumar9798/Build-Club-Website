@@ -13,9 +13,10 @@ const Login = () => {
           <Image
             src="/buildclublogo.png"
             alt="Club Logo"
-            width={150}   // Adjust width to fit the card
-            height={150}  // Adjust height to fit the card
-            style={{ objectFit: 'contain' }}  // Ensure the image fits inside while maintaining aspect ratio
+            width={150}   
+            height={150}  
+            style={{ objectFit: 'contain' }}  
+            priority
           />
         </Link>
         </CardContent>
