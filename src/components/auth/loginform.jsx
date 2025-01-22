@@ -103,13 +103,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation'; // Import useRouter
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
-
+  const router = useRouter(); // Initialize the router
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -121,7 +122,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('Sending data:', formData); // Debug
+    //console.log('Sending data:', formData); // Debug
 
     try {
       const response = await fetch('http://localhost:5000/api/auth/login', {
@@ -136,6 +137,8 @@ const LoginForm = () => {
 
       if (response.ok) {
         console.log('Login successful:', result);
+        localStorage.setItem('token', result.token);
+        router.push('/student/ourTeam');
         // Handle successful login (e.g., save token, redirect)
       } else {
         console.error('Login failed:', result);
